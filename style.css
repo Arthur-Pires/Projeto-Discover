@@ -34,6 +34,7 @@ body {
 */
   /*background color image repeat position/size */
   background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
 }
 
 body * {
@@ -43,13 +44,14 @@ body * {
 
 #container {
   /* border: 1px solid black; */
-  width: 360px;
-  margin: 100px auto 0px;
+  width: 100%;
+  max-width: 588px;
+  margin: 0px auto;
   padding: 56px 0px 32px;
 }
 
 #profile {
-  padding: 24px 0px;
+  padding: 24px;
   text-align: center;
 }
 
@@ -162,4 +164,15 @@ footer {
   padding: 24px;
   text-align: center;
   font-size: 14px;
+}
+
+/* media queries */
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/bg-desktop.jpg);
+  }
+
+  .light {
+    --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
 }
